@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\@types",
+    "\\src\\@types\\react-native-document-scanner",
+    "\\src\\components",
+    "\\typings"
+  ],
+  "SelectedNode": "\\src\\DocumentScanner.xml",
+  "PreviewInSolutionExplorer": false
+}

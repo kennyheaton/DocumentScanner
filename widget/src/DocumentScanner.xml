@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="loves.documentscanner.DocumentScanner" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Document Scanner</name>
+    <description>Scans documents with phone camera</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="overlayColor" type="string" required="true" defaultValue="rgba(255,130,0, 0.7)">
+                <caption>Color Overlay</caption>
+                <description>Color of the detected rectangle</description>
+            </property>
+          <property key="detectionCountBeforeCapture" type="integer" required="true" defaultValue="5">
+            <caption>Detection Count</caption>
+            <description>Number of correct rectangle to detect before capture</description>
+          </property>
+          <property key="enableTorch" type="boolean" required="true" defaultValue="false">
+            <caption>Enable Torch</caption>
+            <description>Allows to active or deactivate flash during document detection</description>
+          </property>
+        </propertyGroup>
+        <propertyGroup caption="iOS Only">
+        <property key="detectionRefreshRateInMS" type="integer" required="true" defaultValue="50">
+          <caption>Refresh Rate</caption>
+          <description>Time between two rectangle detection attempt</description>
+        </property>
+        <property key="useFrontCam" type="boolean" required="true" defaultValue="false">
+          <caption>Use Front Camera</caption>
+          <description>Allows you to switch between front and back camera</description>
+        </property>
+        <property key="brightness" type="decimal" required="true" defaultValue="0.0">
+          <caption>Brightness</caption>
+          <description>Increase or decrease camera brightness. Normal as default.</description>
+        </property>
+        <property key="saturation" type="decimal" required="true" defaultValue="1.0">
+          <caption>Saturation</caption>
+          <description>Increase or decrease camera saturation. Set 0 for black &amp; white</description>
+        </property>
+        <property key="contrast" type="decimal" required="true" defaultValue="1.0">
+          <caption>Contrast</caption>
+          <description>Increase or decrease camera contrast. Normal as default</description>
+        </property>
+        <property key="quality" type="decimal" required="true" defaultValue="0.8">
+          <caption>Quality</caption>
+          <description>Image compression. Reduces both image size and quality</description>
+        </property>
+        <property key="useBase64" type="boolean" required="true" defaultValue="false">
+          <caption>Use Base 64</caption>
+          <description>If base64 representation should be passed instead of image uri's</description>
+        </property>
+        <property key="saveInAppDocument" type="boolean" required="true" defaultValue="false">
+          <caption>Save In App Document</caption>
+          <description>If should save in app document in case of not using base 64</description>
+        </property>
+        <property key="captureMultiple" type="boolean" required="true" defaultValue="false">
+          <caption>Capture Multiple</caption>
+          <description>Keeps the scanner on after a successful capture</description>
+        </property>
+      </propertyGroup>
+    </properties>
+</widget>
